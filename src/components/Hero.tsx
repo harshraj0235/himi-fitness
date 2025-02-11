@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Medal, Award, TrendingUp, Users } from 'lucide-react';
+import { Trophy, Medal, Award, TrendingUp, Users, UserCircle2, LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -13,6 +13,26 @@ export default function Hero() {
         />
       </div>
       
+      {/* Auth Buttons */}
+      <div className="relative flex justify-end px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex gap-4">
+          <Link 
+            to="/signin" 
+            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-white/10"
+          >
+            <UserCircle2 className="w-5 h-5 mr-2" />
+            Sign In
+          </Link>
+          <Link 
+            to="/signup" 
+            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <LogIn className="w-5 h-5 mr-2" />
+            Sign Up
+          </Link>
+        </div>
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
